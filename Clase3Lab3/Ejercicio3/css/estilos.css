@@ -1,0 +1,26 @@
+
+.headerPpal{
+    height: 150px;
+    background-color: blueviolet;
+
+}
+.mainPpal{
+    width: 70%;
+}
+.section1{
+    float: left;
+}
+
+.articlePpal{
+    margin: auto;
+    width: 80%;
+}
+
+.asideRight{
+    width: 30%;
+    float: right;
+}
+
+.footerPpal{
+    clear: both;
+}

@@ -1,0 +1,37 @@
+
+.azul{
+    color: bisque;
+}
+
+h1, a{
+    background-color: crimson;
+    color: darkorange;
+}
+
+p{
+    background-color: rgba(0, 0, 245, 0.5);
+}
+
+#enlace{
+    color: rgba(255, 72, 84, );
+}
+
+span{
+    color: ghostwhite;
+}
+
+p span{
+    color: darkturquoise;
+}
+
+p a span{
+    color: chartreuse;
+}
+
+p > span{
+    color: gold;
+}
+
+/*
+ESTO ES UN COMENTARIO
+*/
