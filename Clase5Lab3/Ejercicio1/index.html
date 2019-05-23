@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta type="description" content="lalalalala">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 5 Lab 3</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+
+</head>
+
+<body>
+
+    <div id="Container">
+        <h2>Materias</h2>
+        <ul id= "lista">
+            <li>Programacion III</li>
+            <li>Laboratorio III</li>
+            <li>Base de datos</li>
+        </ul>
+    </div>
+    
+    <p><input type="button" value="ejecutar" id="btnRun"></p>
+
+    <script>
+    
+    var boton;
+
+    window.addEventListener('load', function(){
+
+        boton= document.getElementById('btnRun');
+
+        boton.addEventListener('click', ejecutar, false);
+    }, false);
+
+    function ejecutar(){
+
+    var lista= document.getElementById('lista');
+    //console.log(lista.childNodes.length);
+    //console.log(lista.childElementCount);
+    //console.log(lista.childNodes)
+    //console.log(lista.children);
+
+    var hijos= lista.childNodes;
+
+    for(var i=0; i<hijos.length; i++)
+    {
+        if(hijos[i].nodeType == Node.ELEMENT_NODE)
+        {
+            console.log(hijos[i]);
+        }
+        //console.log(hijos[i].nodeType);
+    }
+
+    }
+    
+    </script>
+
+
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod eveniet ad ipsum esse dolore pariatur, unde ut aut sunt laboriosam veniam amet voluptates nemo voluptate voluptatem ex enim impedit ipsam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolore dolorum minima doloremque, consequuntur, quibusdam cumque vitae error iusto iste qui cum ipsa nesciunt autem non ipsam dicta pariatur. Voluptatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe unde quidem, quae possimus nostrum dicta veniam laboriosam, suscipit eaque explicabo repellendus soluta modi itaque rerum mollitia dolorum voluptatem maxime a.</p>
+
+    </div>
+
+</body>
+
+</html>

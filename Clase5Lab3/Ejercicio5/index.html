@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta type="description" content="lalalalala">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 5 Lab 3</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <style>
+
+        .white{
+            color: white;
+        }
+    
+        .blue{
+            background-color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+        <div id= 'miDiv'>
+
+
+        </div>
+       
+    
+    <p><input type="button" value="ejecutar" id="btnRun"></p>
+    <p><input type="button" value="remover" id="btnRun2"></p>
+
+    <script>
+    
+    var boton;
+    var boton2;
+
+    var contador= 0;
+    var ids= 1;
+
+    window.addEventListener('load', function(){
+
+        boton= document.getElementById('btnRun');
+
+        boton.addEventListener('click', ejecutar, false);
+    }, false);
+
+    window.addEventListener('load', function(){
+
+    boton2= document.getElementById('btnRun2');
+
+    boton2.addEventListener('click', ejecutar2, false);
+    }, false);
+
+    function ejecutar(){
+
+        var div= document.getElementById('miDiv');
+        //var parrafo= document.createElement('p');
+        var enlace= document.createElement('a');
+
+        //var nodoTexto= document.createTextNode("Esto es un p dinamico");
+        var nodoTexto= document.createTextNode("Ir a Google");
+
+        enlace.appendChild(nodoTexto);
+
+        console.log(enlace.getAttribute('href'));
+
+        enlace.setAttribute('href', 'http://google.com');
+        enlace.setAttribute('id', 'a' + ids);
+        ids++;
+        enlace.setAttribute('target', '_blank');
+        //enlace.setAttribute('class', 'white blue');// le paso las dos clases
+        //enlace.classList.add('blue');
+        //enlace.classList.add('white');
+        
+
+        console.log(enlace.getAttribute('href'));
+
+        div.appendChild(enlace);
+        
+    }
+
+    function ejecutar2(){
+
+        var enlace= document.getElementById('a1');
+        var enlaces= document.getElementsByTagName('a');
+
+        /*
+        if(enlace.hasAttribute('href'))
+        {
+            enlace.removeAttribute('href');
+        }
+        */
+
+        for(var i; i<enlaces.length; i++)
+        {
+            enlaces[i].classList.toggle('blue');
+        }
+
+        
+     
+
+    }
+    
+    </script>
+
+
+    <div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod eveniet ad ipsum esse dolore pariatur, unde ut aut sunt laboriosam veniam amet voluptates nemo voluptate voluptatem ex enim impedit ipsam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad dolore dolorum minima doloremque, consequuntur, quibusdam cumque vitae error iusto iste qui cum ipsa nesciunt autem non ipsam dicta pariatur. Voluptatibus.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe unde quidem, quae possimus nostrum dicta veniam laboriosam, suscipit eaque explicabo repellendus soluta modi itaque rerum mollitia dolorum voluptatem maxime a.</p>
+
+    </div>
+
+</body>
+
+</html>
