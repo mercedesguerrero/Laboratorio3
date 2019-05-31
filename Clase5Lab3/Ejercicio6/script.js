@@ -10,15 +10,6 @@ addEventListener('load', function(){
 }, false);
 
 
-
-function ejecutar(){
-
-    //armar una tabla con las personas
-
-   console.log(personas);
-    
-}
-
 function tableCreate() {
     var div = document.getElementById("info");
     var tabla = document.createElement("table");
@@ -52,15 +43,15 @@ function crearCeldas(tabla){
 
     for(var i = 0; i < personas.length; i++)
     {
-        var filaCabecera = document.createElement("tr");
+        var filaNueva = document.createElement("tr");
         var atributo;
         var columna;
         var texto;
-        tabla.appendChild(filaCabecera);
+        tabla.appendChild(filaNueva);
         for(atributo in personas[i])
         {
             columna = document.createElement("td");
-            filaCabecera.appendChild(columna);
+            filaNueva.appendChild(columna);
             texto = document.createTextNode(personas[i][atributo]);
             columna.appendChild(texto);
         }
