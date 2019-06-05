@@ -28,9 +28,9 @@ function crearCabecera(tabla){
 
     tabla.appendChild(filaCabecera);
 
-    for(atributo in usuarios[0])
+    for(atributo in personas[0])
     {
-        console.log(atributo);//atributo es la clave-- usuarios[prop] devuelve el valor
+        console.log(atributo);//atributo es la clave-- personas[prop] devuelve el valor
 
         columna = document.createElement("th");
         filaCabecera.appendChild(columna);
@@ -41,18 +41,18 @@ function crearCabecera(tabla){
 
 function crearCeldas(tabla){
 
-    for(var i = 0; i < usuarios.length; i++)
+    for(var i = 0; i < personas.length; i++)
     {
         var filaNueva = document.createElement("tr");
         var atributo;
         var columna;
         var texto;
         tabla.appendChild(filaNueva);
-        for(atributo in usuarios[i])
+        for(atributo in personas[i])
         {
             columna = document.createElement("td");
             filaNueva.appendChild(columna);
-            texto = document.createTextNode(usuarios[i][atributo]);
+            texto = document.createTextNode(personas[i][atributo]);
             columna.appendChild(texto);
         }
     }
