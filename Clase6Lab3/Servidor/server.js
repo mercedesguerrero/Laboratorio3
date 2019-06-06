@@ -32,7 +32,7 @@ app.get("/traerJSON", function (request, response) {
   console.log("Enviando persona");
   setTimeout(function () {
     response.send(JSON.stringify(persona));
-  }, 5000);
+  }, 2000);
 
 });
 
@@ -41,7 +41,7 @@ app.get("/traerPersonas", function (request, response) {
   //console.log(personas);
   setTimeout(function () {
     response.send(JSON.stringify(personas));
-  }, 5000);
+  }, 2000);
 
 });
 

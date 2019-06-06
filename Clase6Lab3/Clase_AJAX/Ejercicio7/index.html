@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta type="description" content="lalalalala">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clase 6 Lab 3</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="./js/scripts.js"></script>
+
+</head>
+
+<body>
+
+    <form action="#">
+
+        <fieldset>
+
+            <legend>Alta persona</legend>
+
+        <table>
+            <tr>
+                <td><label for= "txtNombre">Nombre:</label></td>
+                <td><input type="text" id="txtNombre"></td>
+            </tr>
+            <tr>
+                <td><label for= "txtApellido">Apellido:</label></td>
+                <td><input type="text" id="txtApellido"></td>
+            </tr>
+            <tr>
+                    <td><label for= "txtEdad">Edad:</label></td>
+                    <td><input type="text" id="txtEdad"></td>
+                </tr>
+            <tr>
+                <td><input type="Submit" value="Alta persona"></td>
+            </tr>
+        </table>
+
+    </fieldset>
+
+    </form>
+
+    <hr>
+
+    <fieldset>
+
+            <legend>Persona agregada</legend>
+
+        <table>
+            <tr>
+                <td><label for= "id">Id:</label></td>
+                <td><input type="text" id="id"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label for= "nombre">Nombre:</label></td>
+                <td><input type="text" id="nombre"></td><td id="spin"></td>
+            </tr>
+            <tr>
+                <td><label for= "apellido">Apellido:</label></td>
+                <td><input type="text" id="apellido"></td>
+                <td></td>
+            </tr>
+            <tr>
+                    <td><label for= "edad">Edad:</label></td>
+                    <td><input type="text" id="edad"></td>
+                    <td></td>
+                </tr>
+            
+        </table>
+
+    </fieldset>
+
+    <hr>
+
+    <form action="#">
+
+            <fieldset>
+    
+                <legend>Modificar persona</legend>
+    
+            <table>
+                <tr>
+                    <td><label for= "idMod">Id:</label></td>
+                    <td><input type="text" id="idMod"></td>
+                </tr>    
+                <tr>
+                    <td><label for= "nombreMod">Nombre:</label></td>
+                    <td><input type="text" id="nombreMod"></td>
+                </tr>
+                <tr>
+                    <td><label for= "apellidoMod">Apellido:</label></td>
+                    <td><input type="text" id="apellidoMod"></td>
+                </tr>
+                <tr>
+                        <td><label for= "edadMod">Edad:</label></td>
+                        <td><input type="text" id="edadMod"></td>
+                    </tr>
+                <tr>
+                    <td><input type="Submit" value="Modificar persona"></td>
+                </tr>
+            </table>
+    
+        </fieldset>
+    
+        </form>
+
+    <hr>
+
+    <form action="#">
+
+            <fieldset>
+    
+                <legend>Eliminar persona</legend>
+    
+            <table>
+                <tr>
+                    <td><label for= "idBaja">Id:</label></td>
+                    <td><input type="text" id="idBaja"></td>
+                </tr>    
+                <tr>
+                    <td><label for= "nombreBaja">Nombre:</label></td>
+                    <td><input type="text" id="nombreBaja"></td>
+                </tr>
+                <tr>
+                    <td><label for= "apellidoBaja">Apellido:</label></td>
+                    <td><input type="text" id="apellidoBaja"></td>
+                </tr>
+                <tr>
+                        <td><label for= "edadBaja">Edad:</label></td>
+                        <td><input type="text" id="edadBaja"></td>
+                    </tr>
+                <tr>
+                    <td><input type="Submit" value="Eliminar persona"></td>
+                </tr>
+            </table>
+    
+        </fieldset>
+    
+        </form>
+
+    <hr>
+
+    <button id="btnGetPersonas">Traer Personas</button>
+    
+    <div id="info"></div>
+
+</body>
+
+</html>

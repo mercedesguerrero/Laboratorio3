@@ -2,6 +2,12 @@
 var boton;
 var ids= 1;
 
+var persona = {
+    "Nombre": "Raul",
+    "Apellido": "Perez",
+    "Edad": 40
+  };
+
 addEventListener('load', function(){
 
     boton= document.getElementById('btnRun');
@@ -28,9 +34,9 @@ function crearCabecera(tabla){
 
     tabla.appendChild(filaCabecera);
 
-    for(atributo in personas[0])
+    for(atributo in usuarios[0])
     {
-        console.log(atributo);//atributo es la clave-- personas[prop] devuelve el valor
+        console.log(atributo);//atributo es la clave-- usuarios[prop] devuelve el valor
 
         columna = document.createElement("th");
         filaCabecera.appendChild(columna);
@@ -41,21 +47,35 @@ function crearCabecera(tabla){
 
 function crearCeldas(tabla){
 
-    for(var i = 0; i < personas.length; i++)
+    for(var i = 0; i < usuarios.length; i++)
     {
         var filaNueva = document.createElement("tr");
         var atributo;
         var columna;
         var texto;
         tabla.appendChild(filaNueva);
-        for(atributo in personas[i])
+        for(atributo in usuarios[i])
         {
             columna = document.createElement("td");
             filaNueva.appendChild(columna);
-            texto = document.createTextNode(personas[i][atributo]);
+            texto = document.createTextNode(usuarios[i][atributo]);
             columna.appendChild(texto);
         }
     }
 }
+
+addEventListener('load', function(){
+
+    boton= document.getElementById('btnAlta');
+
+    boton.addEventListener('click', crearFormulario, false);
+}, false);
+
+function crearFormulario(){
+
+    
+}
+
+
 
   
