@@ -77,6 +77,7 @@ function agregarPersona(persona){
         }
     };
 
+
     xhr.open('POST', 'http://localhost:3000/altaPersona', true);
     xhr.setRequestHeader('Content-Type', 'application/json')
     xhr.send(JSON.stringify(persona));//STRINGIFY pasar a cadena, lo contrario de JSON.parse
