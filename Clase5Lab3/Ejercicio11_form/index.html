@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta type="description" content="lalalalala">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario y tabla</title>
+    <script src="./js/scripts.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="index.html">Facturación</a></h1>
+        <nav id="nav">
+            <ul>
+                <li class="special">
+                    <a href="Menu" class="MenuToggle"><span>Menu</span></a>
+                    <div id="menu">
+                        <ul>
+                            <li><a href="factura.html">Facturacion</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <article id="main">
+        <header><h2>Facturacion</h2>
+        <p>Factura dinamica con JavaScript</p>
+        </header>
+        <section class="wrapper_style">
+            <div class="inner">
+                <section>
+                    <h4>Datos iniciales</h4>
+
+                    <form action="#" name="formulario" method="post">
+                        <div class="row_uniform">
+                            <div class="campo1">
+                                <input type="text" name="name" id="name" value="" maxlength="30" placeholder="Nombre cliente">
+                            </div>
+                            <div class="campo2">
+                                <input type="text" name="numero" id="numero" value="" placeholder="N°">
+                            </div>
+                            <div class="campo3">
+                                <input type="text" name="codigo" id="codigo" value="" placeholder="Codigo">
+                            </div>
+                            <div class="campo4">
+                                <input type="text" name="descripcion" id="descipcion" value="" placeholder="Descripcion del producto">
+                            </div>
+                            <div class="campo2">
+                                <input type="text" name="cantidad" id="cantidad" value="" placeholder="Cantidad" onkeyup="format(this)" onchange="format(this)">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="contBoton">
+                            <ul class="actions">
+                                <li><input type="button" value="Agregar" class="principal" id="add_row"></li>
+                            </ul>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="table-wrapper">
+                            <table id="tabla_factura">
+                                <thead>
+                                    <tr>
+                                        <th>N°</th>
+                                        <th>Codigo</th>
+                                        <th>Descripcion</th>
+                                        <th>Cantidad</th>
+                                        <th>Precio</th>
+                                        <th>Subtotal</th>
+                                        <th>Impuestos</th>
+                                        <th>Total</th>
+                                        <th>Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="content_table">
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="3"></td>
+                                        <td id="total_cantidad">0.00</td>
+                                        <td id="total_precio">0.00</td>
+                                        <td id="total_subtotal">0.00</td>
+                                        <td id="total_impuesto">0.00</td>
+                                        <td id="total_total">0.00</td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        </form>
+                </section>
+                <br>
+                <br>
+                <br>
+            </div>
+        </section>
+    </article>
+
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="" target="blank" class="icon_twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="" target="blank" class="icon_facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="" target="blank" class="icon_instagram"><span class="label">Instagram</span></a></li>
+        </ul>
+        <ul class="copyright">
+            <li>Developed by mer.melade</li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
