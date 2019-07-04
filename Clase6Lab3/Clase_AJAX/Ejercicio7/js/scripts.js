@@ -15,7 +15,7 @@ function asignarManejadores(){
         persona.apellido= document.getElementById('txtApellido').value;
         persona.edad= document.getElementById('txtEdad').value;
 
-        agregarPersona(persona);
+        agregarPersona(usuarios);
 
     }, false);
 
@@ -156,13 +156,13 @@ function traerPersonas(){
         {
             if(xhr.status == 200)
             {
-                personas= JSON.parse(xhr.responseText);
+                usuarios= JSON.parse(xhr.responseText);
 
                 info.innerHTML='';
 
-                for (var i in personas) {
+                for (var i in usuarios) {
                     
-                    info.innerHTML+= '<p>' + personaToString(personas[i]) + '</p><hr>';
+                    info.innerHTML+= '<p>' + personaToString(usuarios[i]) + '</p><hr>';
                 }  
                 
             }
@@ -183,16 +183,7 @@ function traerPersonas(){
     xhr.send();
 }
 
-function personaToString(persona)
-{
-    var cadena= '';
 
-    for(var prop in persona){
-
-        cadena+= '<b>' + prop + ':</b>' + persona[prop] + ' ';
-    }
-    return cadena;
-}
 
 
 
